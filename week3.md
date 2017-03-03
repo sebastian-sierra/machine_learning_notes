@@ -53,7 +53,7 @@ With this function it can be guaranted that J\(theta\) has only on optima, so it
 
 The cost function can be written in one simple line:
 
-![Simplified Cost Function](week3_images/simplified_cost_fun.png)
+$$\begin{align*}& J(\theta) = \dfrac{1}{m} \sum_{i=1}^m \mathrm{Cost}(h_\theta(x^{(i)}),y^{(i)}) \newline & \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) \; & \text{if y = 1} \newline & \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) \; & \text{if y = 0}\end{align*}$$
 
 The gradient descent algorithm looks exactly the same that in the linear case. The only thing that has changed is the definition of h\(theta\).
 
