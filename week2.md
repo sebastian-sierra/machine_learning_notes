@@ -18,7 +18,7 @@ We can do this by mean normalization.
 
 ### Debugging gradient descent
 
-Plotting $$J\(\theta\)$$ every hundred iterations, each iteration J\(theta\) should decrease.
+Plotting $$J(\theta)$$ every hundred iterations, each iteration $$J\(\theta\)$$ should decrease.
 
 Convertion can also be check in this graph.
 
