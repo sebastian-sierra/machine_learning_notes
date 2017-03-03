@@ -63,15 +63,22 @@ Feature scaling also applies.
 
 There are more sophisticated and faster algorithms to optimize $$\theta$$. The MATLAB library has its own implementations. In order to use them we just need to provide a function that takes some input $$\theta$$  and produces as output the cost function and the partial derivatives:
 
-  
-p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; -webkit-text-stroke: \#000000}  
-span.s1 {font-kerning: none}  
-td.td1 {width: 733.3px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}  
+$$\begin{align*} & J(\theta) \newline & \dfrac{\partial}{\partial \theta_j}J(\theta)\end{align*}$$
 
+```
+function [jVal, gradient] = costFunction(theta)
+  jVal = [...code to compute J(theta)...];
+  gradient = [...code to compute derivative of J(theta)...];
+end
+```
 
-| \begin{align\*} & J\(\theta\) \newline & \dfrac{\partial}{\partial \theta\_j}J\(\theta\)\end{align\*} |
-| :--- |
+And we use it as follows:
 
+```
+options = optimset('GradObj', 'on', 'MaxIter', 100);
+initialTheta = zeros(2,1);
+   [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);
+```
 
 
 
