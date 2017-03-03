@@ -15,13 +15,11 @@ We just need to adjust our hypothesis function from the linear regression to mak
 
 $$g(z) = {1\over 1+exp^{-z}}$$
 
-$$h(x) = g(\theta^tX)$$$$$$
+$$h(x) = g(\theta^tX)$$
 
 # Decision Boundary
 
 To fit the hypothesis values to our classification we can say:
-
-
 
 * $$h(x) ≥ 0.5 \rightarrow y = 1$$
 
